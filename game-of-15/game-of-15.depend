@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1415125212 source:c:\users\avatar\desktop\beads-examples\game-of-15\main.cpp
+	"hge.h"
+	"hgegui.h"
+	<vector>
+	"type_the.h"
+	"thing.h"
+	"context.h"
+	"hyphen_notation.h"
+
+1414780705 c:\users\avatar\desktop\beads-examples\hge\include\hge.h
+	<windows.h>
+
+1415120901 c:\users\avatar\desktop\beads-examples\game-of-15\thing.h
+	"hge.h"
+	<vector>
+	<map>
+	<string>
+
+1415118362 source:c:\users\avatar\desktop\beads-examples\game-of-15\context.cpp
+	"context.h"
+	<vector>
+	<map>
+	<string>
+
+1415118346 c:\users\avatar\desktop\beads-examples\game-of-15\context.h
+	"hge.h"
+	"thing.h"
+	<vector>
+	<map>
+	<string>
+
+1415120932 source:c:\users\avatar\desktop\beads-examples\game-of-15\thing.cpp
+	"thing.h"
+	"context.h"
+
+1415124039 c:\users\avatar\desktop\beads-examples\game-of-15\hy_load.h
+	"hy_it.h"
+	"thing.h"
+	"context.h"
+	<string>
+
+1414780705 c:\users\avatar\desktop\beads-examples\hge\include\hgegui.h
+	"hge.h"
+	"hgesprite.h"
+	"hgerect.h"
+
+1414780705 c:\users\avatar\desktop\beads-examples\hge\include\hgesprite.h
+	"hge.h"
+	"hgerect.h"
+
+1414780705 c:\users\avatar\desktop\beads-examples\hge\include\hgerect.h
+
+1415026838 c:\users\avatar\desktop\beads-examples\game-of-15\type_the.h
+	<string>
+	<vector>
+	<stdexcept>
+	<cstdlib>
+	<sstream>
+
+1415123743 c:\users\avatar\desktop\beads-examples\game-of-15\hyphen_notation.h
+	"hy_teleport.h"
+
+1415124113 c:\users\avatar\desktop\beads-examples\game-of-15\hy_teleport.h
+	"hy_load.h"
+	"thing.h"
+	"context.h"
+	<string>
+
+1415123865 c:\users\avatar\desktop\beads-examples\game-of-15\hy_it.h
+	<string>
+
