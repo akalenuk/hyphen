@@ -33,10 +33,7 @@ bool FrameFunc()
         (*it).Update();
 	}
 
-    float Mouse_x;
-    float Mouse_y;
-    context::get_hge()->Input_GetMousePos(&Mouse_x, &Mouse_y);
-    teleport-"cursor"-to-Mouse_x-Mouse_y;
+    teleport-"cursor"-to-(mouse-x)-(mouse-y);
 
 	return false;
 }
