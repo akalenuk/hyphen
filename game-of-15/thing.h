@@ -26,6 +26,7 @@ struct Thing{
     void Update();
     void Render();
     void Teleport(int x, int y);
+    void Blend(int blend_mode);
 };
 
 #endif // THING_H_INCLUDED

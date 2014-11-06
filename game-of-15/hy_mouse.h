@@ -1,7 +1,7 @@
 #ifndef HY_MOUSE_H_INCLUDED
 #define HY_MOUSE_H_INCLUDED
 
-#include "hy_teleport.h"
+#include "hy_blend.h"
 
 struct X {} x;
 struct Y {} y;

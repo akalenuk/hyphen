@@ -46,3 +46,7 @@ void Thing::Teleport(int x, int y){
     to_y = y;
     Update();
 }
+
+void Thing::Blend(int blend_mode){
+    picture.blend = blend_mode;
+}

@@ -5,8 +5,6 @@
 
 #include "thing.h"
 #include "context.h"
-#include <string>
-using namespace std;
 
 struct As{} as;
 

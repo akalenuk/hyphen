@@ -46,12 +46,19 @@
 		</Linker>
 		<Unit filename="context.cpp" />
 		<Unit filename="context.h" />
+		<Unit filename="hy_blend.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="hy_from.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="hy_it.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="hy_load.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="hy_mouse.h" />
 		<Unit filename="hy_teleport.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

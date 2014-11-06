@@ -5,9 +5,6 @@
 #include "hy_load.h"
 
 #include "thing.h"
-#include "context.h"
-#include <string>
-using namespace std;
 
 struct To{} to;
 

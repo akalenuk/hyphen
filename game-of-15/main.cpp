@@ -69,7 +69,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         context::set_hge(hge);
 
         bg.tex = hge->Texture_Load("stuff/bg.png");
-        bg.blend=BLEND_ALPHAADD | BLEND_COLORMUL | BLEND_ZWRITE;
+        bg.blend = BLEND_ALPHAADD | BLEND_COLORMUL | BLEND_ZWRITE;
 		for(int i=0;i<4;i++){
 			bg.v[i].z=0.5f;
 			bg.v[i].col=0xFFFFA000;
@@ -79,14 +79,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		bg.v[2].tx=1.0f; bg.v[2].ty=1.0f;
 		bg.v[3].tx=0.0f; bg.v[3].ty=1.0f;
 
-        for(the I : {0, 1, 2, 3}){
-            for(the J : {0, 1, 2, 3}){
-                the K = I * 4 + J + 1;
+        for(the I : from-1-to-4){
+            for(the J : from-1-to-4){
+                the K = I * 4 + J - 4;
                 if( K < 16){
-                    the X = 185 + J * 105;
-                    the Y = 85 + I * 105;
+                    the X = 85 + J * 105;
+                    the Y = I * 105 - 15;
                     load-("stuff/tile_" & K & ".png")-as-("tile_" & K);
                     teleport-it-to-X-Y;
+                    blend-it-glassy;
                 }
             }
         }
