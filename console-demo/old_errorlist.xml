@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results><error id="AssignmentAddressToInteger" severity="style" msg="Assigning an address value to the integer (int/long/etc) type is not portable"/>
+<error id="AssignmentIntegerToAddress" severity="style" msg="Assigning an integer (int/long/etc) to a pointer is not portable"/>
+<error id="autoVariables" severity="error" msg="Assigning address of local auto-variable to a function parameter."/>
+<error id="returnAddressOfAutoVariable" severity="error" msg="Return of the address of an auto-variable"/>
+<error id="returnLocalVariable" severity="error" msg="Returning pointer to local array variable"/>
+<error id="returnReference" severity="error" msg="Returning reference to auto variable"/>
+<error id="returnTempReference" severity="error" msg="Returning reference to temporary"/>
+<error id="returnAutocstr" severity="error" msg="Returning pointer to auto variable"/>
+<error id="returnTempPointer" severity="error" msg="Returning pointer to temporary"/>
+<error id="autovarInvalidDeallocation" severity="error" msg="Deallocating auto-variable is invalid"/>
+<error id="returnAddressOfFunctionParameter" severity="error" msg="Return the address of function parameter 'parameter'"/>
+<error id="boostForeachError" severity="error" msg="BOOST_FOREACH caches the end() iterator. It's undefined behavior if you modify the container."/>
+<error id="arrayIndexOutOfBounds" severity="error" msg="Array 'array[2]' index 2 out of bounds"/>
+<error id="bufferAccessOutOfBounds" severity="error" msg="Buffer access out-of-bounds: buffer"/>
+<error id="outOfBounds" severity="error" msg="index is out of bounds: Supplied size 2 is larger than actual size of 1"/>
+<error id="terminateStrncpy" severity="style" msg="The buffer 'buffer' may not be zero-terminated after the call to strncpy()."/>
+
+<error id="negativeIndex" severity="error" msg="Array index -1 is out of bounds"/>
+<error id="insecureCmdLineArgs" severity="error" msg="Buffer overrun possible for long cmd-line args"/>
+<error id="pointerOutOfBounds" severity="style" msg="Undefined behaviour: pointer arithmetic result does not point into or just past the end of the array"/>
+<error id="arrayIndexThenCheck" severity="style" msg="Array index index is used before limits check"/>
+<error id="possibleBufferAccessOutOfBounds" severity="style" msg="Possible buffer overflow if strlen(source) is larger than or equal to sizeof(destination)."/>
+
+<error id="noConstructor" severity="style" msg="The class 'classname' does not have a constructor."/>
+<error id="uninitVar" severity="style" msg="Member variable 'classname::varname' is not initialized in the constructor."/>
+<error id="operatorEqVarError" severity="style" msg="Member variable 'classname::' is not assigned a value in 'classname::operator='"/>
+<error id="unusedPrivateFunction" severity="style" msg="Unused private function 'classname::funcname'"/>
+<error id="memsetClass" severity="error" msg="Using 'memfunc' on class that contains a classname"/>
+<error id="operatorEq" severity="style" msg="'class::operator=' should return 'class &amp;'"/>
+<error id="thisSubtraction" severity="style" msg="Suspicious pointer subtraction"/>
+<error id="operatorEqRetRefThis" severity="style" msg="'operator=' should return reference to self"/>
+<error id="operatorEqToSelf" severity="style" msg="'operator=' should check for assignment to self"/>
+
+<error id="initializerList" severity="style" msg="Member variable 'class::variable' is in the wrong order in the initializer list."/>
+<error id="exceptThrowInDestructor" severity="error" msg="Throwing exception in destructor"/>
+<error id="exceptDeallocThrow" severity="style" msg="Throwing exception in invalid state, p points at deallocated memory"/>
+<error id="exceptRethrowCopy" severity="style" msg="Throwing a copy of the caught exception instead of rethrowing the original exception"/>
+<error id="catchExceptionByValue" severity="style" msg="Exception should be caught by reference."/>
+<error id="assignIfError" severity="style" msg="Mismatching assignment and comparison, comparison is always false"/>
+<error id="comparisonError" severity="style" msg="Expression '(X &amp; 0x6) == 0x1' is always false"/>
+<error id="multiCondition" severity="style" msg="'else if' condition matches previous condition at line 1"/>
+<error id="memleak" severity="error" msg="Memory leak: varname"/>
+<error id="resourceLeak" severity="error" msg="Resource leak: varname"/>
+<error id="deallocDealloc" severity="error" msg="Deallocating a deallocated pointer: varname"/>
+<error id="deallocuse" severity="error" msg="Dereferencing 'varname' after it is deallocated / released"/>
+<error id="mismatchSize" severity="error" msg="The given size sz is mismatching"/>
+<error id="mismatchAllocDealloc" severity="error" msg="Mismatching allocation and deallocation: varname"/>
+<error id="memleakOnRealloc" severity="error" msg="Common realloc mistake: 'varname' nulled but not freed upon failure"/>
+<error id="nonreentrantFunctionscrypt" severity="style" msg="Found non reentrant function 'crypt'. For threadsafe applications it is recommended to use the reentrant replacement function 'crypt_r'"/>
+<error id="nonreentrantFunctionsctermid" severity="style" msg="Found non reentrant function 'ctermid'. For threadsafe applications it is recommended to use the reentrant replacement function 'ctermid_r'"/>
+<error id="nonreentrantFunctionsecvt" severity="style" msg="Found non reentrant function 'ecvt'. For threadsafe applications it is recommended to use the reentrant replacement function 'ecvt_r'"/>
+<error id="nonreentrantFunctionsfcvt" severity="style" msg="Found non reentrant function 'fcvt'. For threadsafe applications it is recommended to use the reentrant replacement function 'fcvt_r'"/>
+<error id="nonreentrantFunctionsfgetgrent" severity="style" msg="Found non reentrant function 'fgetgrent'. For threadsafe applications it is recommended to use the reentrant replacement function 'fgetgrent_r'"/>
+<error id="nonreentrantFunctionsfgetpwent" severity="style" msg="Found non reentrant function 'fgetpwent'. For threadsafe applications it is recommended to use the reentrant replacement function 'fgetpwent_r'"/>
+<error id="nonreentrantFunctionsfgetspent" severity="style" msg="Found non reentrant function 'fgetspent'. For threadsafe applications it is recommended to use the reentrant replacement function 'fgetspent_r'"/>
+<error id="nonreentrantFunctionsgcvt" severity="style" msg="Found non reentrant function 'gcvt'. For threadsafe applications it is recommended to use the reentrant replacement function 'gcvt_r'"/>
+<error id="nonreentrantFunctionsgetgrent" severity="style" msg="Found non reentrant function 'getgrent'. For threadsafe applications it is recommended to use the reentrant replacement function 'getgrent_r'"/>
+<error id="nonreentrantFunctionsgetgrgid" severity="style" msg="Found non reentrant function 'getgrgid'. For threadsafe applications it is recommended to use the reentrant replacement function 'getgrgid_r'"/>
+<error id="nonreentrantFunctionsgetgrnam" severity="style" msg="Found non reentrant function 'getgrnam'. For threadsafe applications it is recommended to use the reentrant replacement function 'getgrnam_r'"/>
+<error id="nonreentrantFunctionsgethostbyaddr" severity="style" msg="Found non reentrant function 'gethostbyaddr'. For threadsafe applications it is recommended to use the reentrant replacement function 'gethostbyaddr_r'"/>
+<error id="nonreentrantFunctionsgethostbyname" severity="style" msg="Found non reentrant function 'gethostbyname'. For threadsafe applications it is recommended to use the reentrant replacement function 'gethostbyname_r'"/>
+<error id="nonreentrantFunctionsgethostbyname2" severity="style" msg="Found non reentrant function 'gethostbyname2'. For threadsafe applications it is recommended to use the reentrant replacement function 'gethostbyname2_r'"/>
+<error id="nonreentrantFunctionsgethostent" severity="style" msg="Found non reentrant function 'gethostent'. For threadsafe applications it is recommended to use the reentrant replacement function 'gethostent_r'"/>
+<error id="nonreentrantFunctionsgetlogin" severity="style" msg="Found non reentrant function 'getlogin'. For threadsafe applications it is recommended to use the reentrant replacement function 'getlogin_r'"/>
+<error id="nonreentrantFunctionsgetnetbyaddr" severity="style" msg="Found non reentrant function 'getnetbyaddr'. For threadsafe applications it is recommended to use the reentrant replacement function 'getnetbyaddr_r'"/>
+<error id="nonreentrantFunctionsgetnetbyname" severity="style" msg="Found non reentrant function 'getnetbyname'. For threadsafe applications it is recommended to use the reentrant replacement function 'getnetbyname_r'"/>
+<error id="nonreentrantFunctionsgetnetgrent" severity="style" msg="Found non reentrant function 'getnetgrent'. For threadsafe applications it is recommended to use the reentrant replacement function 'getnetgrent_r'"/>
+<error id="nonreentrantFunctionsgetprotobyname" severity="style" msg="Found non reentrant function 'getprotobyname'. For threadsafe applications it is recommended to use the reentrant replacement function 'getprotobyname_r'"/>
+<error id="nonreentrantFunctionsgetpwent" severity="style" msg="Found non reentrant function 'getpwent'. For threadsafe applications it is recommended to use the reentrant replacement function 'getpwent_r'"/>
+<error id="nonreentrantFunctionsgetpwnam" severity="style" msg="Found non reentrant function 'getpwnam'. For threadsafe applications it is recommended to use the reentrant replacement function 'getpwnam_r'"/>
+<error id="nonreentrantFunctionsgetpwuid" severity="style" msg="Found non reentrant function 'getpwuid'. For threadsafe applications it is recommended to use the reentrant replacement function 'getpwuid_r'"/>
+<error id="nonreentrantFunctionsgetrpcbyname" severity="style" msg="Found non reentrant function 'getrpcbyname'. For threadsafe applications it is recommended to use the reentrant replacement function 'getrpcbyname_r'"/>
+<error id="nonreentrantFunctionsgetrpcbynumber" severity="style" msg="Found non reentrant function 'getrpcbynumber'. For threadsafe applications it is recommended to use the reentrant replacement function 'getrpcbynumber_r'"/>
+<error id="nonreentrantFunctionsgetrpcent" severity="style" msg="Found non reentrant function 'getrpcent'. For threadsafe applications it is recommended to use the reentrant replacement function 'getrpcent_r'"/>
+<error id="nonreentrantFunctionsgetservbyname" severity="style" msg="Found non reentrant function 'getservbyname'. For threadsafe applications it is recommended to use the reentrant replacement function 'getservbyname_r'"/>
+<error id="nonreentrantFunctionsgetservbyport" severity="style" msg="Found non reentrant function 'getservbyport'. For threadsafe applications it is recommended to use the reentrant replacement function 'getservbyport_r'"/>
+<error id="nonreentrantFunctionsgetservent" severity="style" msg="Found non reentrant function 'getservent'. For threadsafe applications it is recommended to use the reentrant replacement function 'getservent_r'"/>
+<error id="nonreentrantFunctionsgetspent" severity="style" msg="Found non reentrant function 'getspent'. For threadsafe applications it is recommended to use the reentrant replacement function 'getspent_r'"/>
+<error id="nonreentrantFunctionsgetspnam" severity="style" msg="Found non reentrant function 'getspnam'. For threadsafe applications it is recommended to use the reentrant replacement function 'getspnam_r'"/>
+<error id="nonreentrantFunctionsgmtime" severity="style" msg="Found non reentrant function 'gmtime'. For threadsafe applications it is recommended to use the reentrant replacement function 'gmtime_r'"/>
+<error id="nonreentrantFunctionslocaltime" severity="style" msg="Found non reentrant function 'localtime'. For threadsafe applications it is recommended to use the reentrant replacement function 'localtime_r'"/>
+<error id="nonreentrantFunctionsreaddir" severity="style" msg="Found non reentrant function 'readdir'. For threadsafe applications it is recommended to use the reentrant replacement function 'readdir_r'"/>
+<error id="nonreentrantFunctionsstrtok" severity="style" msg="Found non reentrant function 'strtok'. For threadsafe applications it is recommended to use the reentrant replacement function 'strtok_r'"/>
+<error id="nonreentrantFunctionstempnam" severity="style" msg="Found non reentrant function 'tempnam'. For threadsafe applications it is recommended to use the reentrant replacement function 'tempnam_r'"/>
+<error id="nonreentrantFunctionsttyname" severity="style" msg="Found non reentrant function 'ttyname'. For threadsafe applications it is recommended to use the reentrant replacement function 'ttyname_r'"/>
+<error id="nullPointer" severity="error" msg="Possible null pointer dereference: pointer"/>
+<error id="obsoleteFunctionsasctime" severity="style" msg="Found obsolete function 'asctime'. It is recommended to use the function 'strftime' instead"/>
+<error id="obsoleteFunctionsasctime_r" severity="style" msg="Found obsolete function 'asctime_r'. It is recommended to use the function 'strftime' instead"/>
+<error id="obsoleteFunctionsbcmp" severity="style" msg="Found obsolete function 'bcmp'. It is recommended that new applications use the 'memcmp' function"/>
+<error id="obsoleteFunctionsbcopy" severity="style" msg="Found obsolete function 'bcopy'. It is recommended that new applications use the 'memmove' or 'memcpy' functions"/>
+<error id="obsoleteFunctionsbsd_signal" severity="style" msg="Found obsolete function 'bsd_signal'. It is recommended that new applications use the 'sigaction' function"/>
+<error id="obsoleteFunctionsbzero" severity="style" msg="Found obsolete function 'bzero'. It is recommended that new applications use the 'memset' function"/>
+<error id="obsoleteFunctionsctime" severity="style" msg="Found obsolete function 'ctime'. It is recommended to use the function 'strftime' instead"/>
+<error id="obsoleteFunctionsecvt" severity="style" msg="Found obsolete function 'ecvt'. It is recommended that new applications use the 'sprintf' function"/>
+<error id="obsoleteFunctionsfcvt" severity="style" msg="Found obsolete function 'fcvt'. It is recommended that new applications use the 'sprintf' function"/>
+<error id="obsoleteFunctionsftime" severity="style" msg="Found obsolete function 'ftime'."/>
+<error id="obsoleteFunctionsgcvt" severity="style" msg="Found obsolete function 'gcvt'. It is recommended that new applications use the 'sprintf' function"/>
+<error id="obsoleteFunctionsgetcontext" severity="style" msg="Found obsolete function 'getcontext'. Due to portability issues with this function, applications are recommended to be rewritten to use POSIX threads"/>
+<error id="obsoleteFunctionsgethostbyaddr" severity="style" msg="Found obsolete function 'gethostbyaddr'. It is recommended that new applications use the 'getnameinfo' function"/>
+<error id="obsoleteFunctionsgethostbyname" severity="style" msg="Found obsolete function 'gethostbyname'. It is recommended that new applications use the 'getaddrinfo' function"/>
+<error id="obsoleteFunctionsgetwd" severity="style" msg="Found obsolete function 'getwd'. It is recommended that new applications use the 'getcwd' function"/>
+<error id="obsoleteFunctionsindex" severity="style" msg="Found obsolete function 'index'. It is recommended to use the function 'strchr' instead"/>
+<error id="obsoleteFunctionsmakecontext" severity="style" msg="Found obsolete function 'makecontext'. Due to portability issues with this function, applications are recommended to be rewritten to use POSIX threads"/>
+<error id="obsoleteFunctionspthread_attr_getstackaddr" severity="style" msg="Found obsolete function 'pthread_attr_getstackaddr'. It is recommended that new applications use the 'pthread_attr_getstack' function"/>
+<error id="obsoleteFunctionspthread_attr_setstackaddr" severity="style" msg="Found obsolete function 'pthread_attr_setstackaddr'. It is recommended that new applications use the 'pthread_attr_setstack' function"/>
+<error id="obsoleteFunctionsrand_r" severity="style" msg="Found obsolete function 'rand_r'. It is recommended to use the function 'rand' instead"/>
+<error id="obsoleteFunctionsrindex" severity="style" msg="Found obsolete function 'rindex'. It is recommended to use the function 'strrchr' instead"/>
+<error id="obsoleteFunctionsscalbln" severity="style" msg="Found obsolete function 'scalb'. It is recommended to use either 'scalbln', 'scalblnf' or 'scalblnl' instead of this function"/>
+<error id="obsoleteFunctionsswapcontext" severity="style" msg="Found obsolete function 'swapcontext'. Due to portability issues with this function, applications are recommended to be rewritten to use POSIX threads"/>
+<error id="obsoleteFunctionstmpnam" severity="style" msg="Found obsolete function 'tmpnam'. It is recommended to use either 'tmpfile', 'mkstemp', or 'mkdtemp' instead for this function"/>
+<error id="obsoleteFunctionstmpnam_r" severity="style" msg="Found obsolete function 'tmpnam_r'. It is recommended to use either 'tmpfile', 'mkstemp', or 'mkdtemp' instead for this function"/>
+<error id="obsoleteFunctionsualarm" severity="style" msg="Found obsolete function 'ualarm'. It is recommended to use either 'timer_create', 'timer_delete', 'timer_getoverrun', 'timer_gettime', or 'timer_settime' instead of this function"/>
+<error id="obsoleteFunctionsusleep" severity="style" msg="Found obsolete function 'usleep'. It is recommended that new applications use the 'nanosleep' or 'setitimer' function"/>
+<error id="obsoleteFunctionsutime" severity="style" msg="Found obsolete function 'utime'. It is recommended to use the function 'utimensat' instead"/>
+<error id="obsoleteFunctionsvfork" severity="style" msg="Found obsolete function 'vfork'. It is recommended to use the function 'fork' instead"/>
+<error id="obsoleteFunctionswcswcs" severity="style" msg="Found obsolete function 'wcswcs'. It is recommended to use the function 'wcsstr' instead"/>
+<error id="assignBoolToPointer" severity="error" msg="Assigning bool value to pointer (converting bool value to address)"/>
+<error id="sprintfOverlappingData" severity="error" msg="Undefined behavior: variable is used as parameter and destination in s[n]printf()."/>
+<error id="udivError" severity="error" msg="Unsigned division. The result will be wrong."/>
+<error id="zerodiv" severity="error" msg="Division by zero"/>
+<error id="wrongmathcall" severity="error" msg="Passing value  to () leads to undefined result"/>
+<error id="fflushOnInputStream" severity="error" msg="fflush() called on input stream &quot;stdin&quot; may result in undefined behaviour"/>
+<error id="unusedScopedObject" severity="error" msg="instance of &quot;varname&quot; object destroyed immediately"/>
+<error id="sizeofwithsilentarraypointer" severity="error" msg="Using sizeof for array given as function argument returns the size of pointer."/>
+
+<error id="sizeofwithnumericparameter" severity="style" msg="Using sizeof with a numeric constant as function argument might not be what you intended."/>
+<error id="coutCerrMisusage" severity="error" msg="Invalid usage of output stream: '&lt;&lt; std::cout'."/>
+<error id="doubleFree" severity="error" msg="Memory pointed to by 'varname' is freed twice."/>
+<error id="cstyleCast" severity="style" msg="C-style pointer casting"/>
+<error id="dangerousUsageStrtol" severity="error" msg="Invalid radix in call to strtol or strtoul. Must be 0 or 2-36"/>
+<error id="passedByValue" severity="style" msg="Function parameter 'parametername' should be passed by reference."/>
+<error id="constStatement" severity="style" msg="Redundant code: Found a statement that begins with type constant"/>
+<error id="charArrayIndex" severity="style" msg="Using char type as array index"/>
+<error id="charBitOp" severity="style" msg="When using char variables in bit operations, sign extension can generate unexpected results."/>
+<error id="variableScope" severity="style" msg="The scope of the variable 'varname' can be reduced"/>
+<error id="strPlusChar" severity="error" msg="Unusual pointer arithmetic"/>
+<error id="sizeofsizeof" severity="style" msg="Calling sizeof for 'sizeof'."/>
+<error id="sizeofCalculation" severity="style" msg="Found calculation inside sizeof()"/>
+<error id="redundantAssignInSwitch" severity="style" msg="Redundant assignment of &quot;varname&quot; in switch"/>
+<error id="switchCaseFallThrough" severity="style" msg="Switch falls through case without comment"/>
+<error id="selfAssignment" severity="style" msg="Redundant assignment of &quot;varname&quot; to itself"/>
+<error id="assignmentInAssert" severity="style" msg="Assert statement modifies 'varname'."/>
+<error id="invalidscanf" severity="style" msg="scanf without field width limits can crash with huge input data"/>
+<error id="incorrectLogicOperator" severity="style" msg="Mutual exclusion over || always evaluates to true. Did you intend to use &amp;&amp; instead?"/>
+<error id="secondAlwaysTrueFalseWhenFirstTrue" severity="style" msg="when first comparison is true, the 2nd comparison is always true"/>
+<error id="memsetZeroBytes" severity="style" msg="memset() called to fill 0 bytes of 'varname'"/>
+<error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for + and ?"/>
+<error id="clarifyCondition" severity="style" msg="Suspicious condition (assignment+comparison), it can be clarified with parentheses"/>
+<error id="incorrectStringCompare" severity="style" msg="String literal &quot;Hello World&quot; doesn't match length argument for substr(12)."/>
+<error id="incorrectStringBooleanError" severity="style" msg="A boolean comparison with the string literal &quot;Hello World&quot; is always true."/>
+<error id="incrementboolean" severity="style" msg="The use of a variable of type bool with the ++ postfix operator is always true and deprecated by the C++ Standard."/>
+<error id="comparisonOfBoolWithInt" severity="style" msg="Comparison of a boolean with integer that is neither 1 nor 0"/>
+<error id="duplicateIf" severity="style" msg="Found duplicate if expressions."/>
+<error id="duplicateBranch" severity="style" msg="Found duplicate branches for if and else."/>
+<error id="duplicateExpression" severity="style" msg="Same expression on both sides of '&amp;&amp;'."/>
+<error id="stringCompare" severity="style" msg="Comparison of identical string variables."/>
+<error id="duplicateBreak" severity="style" msg="Consecutive return, break, continue, goto or throw statements are unnecessary."/>
+<error id="unreachableCode" severity="style" msg="Statements following return, break, continue, goto or throw will never be executed."/>
+<error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned variable 'varname' is less than zero."/>
+<error id="unsignedPositive" severity="style" msg="An unsigned variable 'varname' can't be negative so it is unnecessary to test it."/>
+
+<error id="compareBoolExpressionWithInt" severity="style" msg="Comparison of a boolean expression with an integer other than 0 or 1."/>
+
+<error id="wrongPrintfScanfArgNum" severity="error" msg="printf format string has 3 parameters but only 2 are given"/>
+<error id="invalidScanfArgType" severity="style" msg="scanf argument no. 1: requires non-const pointers or arrays as arguments"/>
+<error id="invalidPrintfArgType_s" severity="style" msg="%s in format string (no. 1) requires a char* given in the argument list"/>
+<error id="invalidPrintfArgType_n" severity="style" msg="%n in format string (no. 1) requires a pointer to an non-const integer given in the argument list"/>
+<error id="invalidPrintfArgType_p" severity="style" msg="%p in format string (no. 1) requires an integer or pointer given in the argument list"/>
+<error id="invalidPrintfArgType_int" severity="style" msg="%u in format string (no. 1) requires an integer given in the argument list"/>
+<error id="invalidPrintfArgType_float" severity="style" msg="%f in format string (no. 1) requires a floating point number given in the argument list"/>
+<error id="wrongcctypecall" severity="error" msg="Passing value value to funname() cause undefined behavior, which may lead to a crash"/>
+<error id="invalidIterator1" severity="error" msg="Invalid iterator: iterator"/>
+<error id="iterators" severity="error" msg="Same iterator is used with both container1 and container2"/>
+<error id="mismatchingContainers" severity="error" msg="mismatching containers"/>
+<error id="eraseDereference" severity="error" msg="Dereferenced iterator 'iter' has been erased"/>
+<error id="stlOutOfBounds" severity="error" msg="When i==foo.size(), foo[i] is out of bounds"/>
+<error id="erase" severity="error" msg="Dangerous iterator usage after erase()-method."/>
+<error id="invalidIterator2" severity="error" msg="After push_back|push_front|insert, the iterator 'iterator' may be invalid"/>
+<error id="invalidPointer" severity="error" msg="Invalid pointer 'pointer' after push_back / push_front"/>
+<error id="stlBoundries" severity="error" msg="Dangerous container iterator compare using &lt; operator for container"/>
+<error id="stlIfFind" severity="style" msg="Suspicious condition. The result of find is an iterator, but it is not properly checked."/>
+<error id="stlIfStrFind" severity="style" msg="Suspicious checking of string::find() return value."/>
+<error id="stlcstr" severity="error" msg="Dangerous usage of c_str(). The returned value by c_str() is invalid after this call."/>
+<error id="stlSize" severity="style" msg="Possible inefficient checking for 'list' emptiness."/>
+<error id="redundantIfRemove" severity="style" msg="Redundant checking of STL container element."/>
+<error id="useAutoPointerCopy" severity="style" msg="Copy 'auto_ptr' pointer to another do not create two equal objects since one has lost its ownership of the pointer."/>
+<error id="useAutoPointerContainer" severity="error" msg="You can randomly lose access to pointers if you store 'auto_ptr' pointers in a container because the copy-semantics of 'auto_ptr' are not compatible with containers."/>
+<error id="useAutoPointerArray" severity="error" msg="Object pointed by an 'auto_ptr' is destroyed using operator 'delete'. You should not use 'auto_ptr' for pointers obtained with operator 'new[]'."/>
+<error id="uselessCallsCompare" severity="style" msg="It is inefficient to call 'str.find(str)' as it always returns 0."/>
+<error id="uselessCallsSwap" severity="style" msg="It is inefficient to swap a object with itself by calling 'str.swap(str)'"/>
+<error id="uselessCallsSubstr" severity="style" msg="Function 'substr' useless call. Function create copy of the 'str' object."/>
+<error id="uninitstring" severity="error" msg="Dangerous usage of 'varname' (strncpy doesn't always 0-terminate it)"/>
+<error id="uninitdata" severity="error" msg="Data is allocated but not initialized: varname"/>
+<error id="uninitvar" severity="error" msg="Uninitialized variable: varname"/>
+<error id="unusedFunction" severity="style" msg="The function 'funcName' is never used"/>
+<error id="unusedVariable" severity="style" msg="Unused variable: varname"/>
+<error id="unusedAllocatedMemory" severity="style" msg="Variable 'varname' is allocated memory that is never used"/>
+<error id="unreadVariable" severity="style" msg="Variable 'varname' is assigned a value that is never used"/>
+<error id="unassignedVariable" severity="style" msg="Variable 'varname' is not assigned a value"/>
+<error id="unusedStructMember" severity="style" msg="struct or union member 'structname::variable' is never used"/>
+<error id="postfixOperator" severity="style" msg="Prefer prefix ++/-- operators for non-primitive types."/>
+<error id="simplePatternError" severity="style" msg="Found simple pattern inside Token::Match() call: &quot;class {&quot;"/>
+<error id="complexPatternError" severity="error" msg="Found complex pattern inside Token::Match() call: &quot;%type% ( )&quot;"/>
+<error id="missingPercentCharacter" severity="error" msg="Missing percent end character in Token::Match() pattern: &quot;%num&quot;"/>
+<error id="syntaxError" severity="error" msg="Invalid number of character ( ) when these macros are defined: ''."/>
+<error id="cppcheckError" severity="error" msg="Analysis failed. If the code is valid then please report this failure."/>
+
+<error id="unnecessaryForwardDeclaration" severity="style" msg="Variable 'name' forward declaration unnecessary, already declared"/>
+<error id="variableHidingEnum" severity="style" msg="Variable 'name' hides enumerator with same name"/>
+<error id="unnecessaryQualification" severity="style" msg="Extra qualification 'type' unnecessary and considered an error by many compilers."/>
+<error id="missingInclude" severity="style" msg="Include file: &quot;&quot; not found."/>
+<error id="preprocessorErrorDirective" severity="error" msg="#error message"/>
+</results>

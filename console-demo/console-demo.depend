@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1415420921 source:c:\users\avatar\documents\github\hyphen\console-demo\main.cpp
+	"hyphen.h"
+
+1415427636 c:\users\avatar\documents\github\hyphen\console-demo\hyphen.h
+	<iostream>
+	<stdexcept>
+	<algorithm>
+	<fstream>
+	<stdexcept>
+	<map>
+	"type_the.h"
+
+1415421058 c:\users\avatar\documents\github\hyphen\console-demo\type_the.h
+	<string>
+	<vector>
+	<stdexcept>
+	<cstdlib>
+	<sstream>
+
