@@ -27,12 +27,23 @@ bool FrameFunc()
 	bg.v[2].x=800;  bg.v[2].y=600;
 	bg.v[3].x=0;    bg.v[3].y=600;
 
-    vector<Thing>::iterator it = context::get_things().begin();
+    vector<Thing>::iterator iter = context::get_things().begin();
 	vector<Thing>::iterator eit = context::get_things().end();
-	for(; it != eit; ++it){
-        (*it).Update();
+	for(; iter != eit; ++iter){
+        (*iter).Update();
 	}
 
+    for(the I : from-1-to-15){
+        the Tile = "tile_" & I;
+        the EmptyTileX = "tile_16"-x;
+        the EmptyTileY = "tile_16"-y;
+        if( Tile-is-clicked ){
+            if( abs( Tile-x - EmptyTileX ) + abs( Tile-y - EmptyTileY ) == 105 ){
+                teleport-"tile_16"-to-(Tile-x)-(Tile-y);
+                teleport-Tile-to-EmptyTileX-EmptyTileY;
+            }
+        }
+    }
     teleport-"cursor"-to-(mouse-x)-(mouse-y);
 
 	return false;
@@ -82,13 +93,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         for(the I : from-1-to-4){
             for(the J : from-1-to-4){
                 the K = I * 4 + J - 4;
+                the X = 85 + J * 105;
+                the Y = I * 105 - 15;
                 if( K < 16){
-                    the X = 85 + J * 105;
-                    the Y = I * 105 - 15;
                     load-("stuff/tile_" & K & ".png")-as-("tile_" & K);
-                    teleport-it-to-X-Y;
                     blend-it-glassy;
+                }else{
+                    make-"tile_16";
                 }
+                teleport-it-to-X-Y;
             }
         }
         load-"stuff/cursor.png"-as-"cursor";
@@ -99,7 +112,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		vector<Thing>::iterator it = context::get_things().begin();
         vector<Thing>::iterator eit = context::get_things().end();
         for(; it != eit; ++it){
-            context::get_hge()->Texture_Free( (*it).picture.tex );
+            if(it->visible){
+                context::get_hge()->Texture_Free( (*it).picture.tex );
+            }
         }
 	}else{
 		MessageBox(NULL, hge->System_GetErrorMessage(), "Error", MB_OK | MB_ICONERROR | MB_APPLMODAL);

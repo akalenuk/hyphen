@@ -12,7 +12,7 @@ namespace context{
 
     HGE* get_hge();
     void set_hge(HGE* hge);
-    void add_picture(string name, Thing& thing);
+    void add_thing(string name, Thing& thing);
     vector<Thing>& get_things();
     Thing& get_thing(string name);
 }

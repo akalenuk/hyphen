@@ -1,7 +1,7 @@
 #ifndef HY_LOAD_H_INCLUDED
 #define HY_LOAD_H_INCLUDED
 
-#include "hy_it.h"
+#include "hy_make.h"
 
 #include "thing.h"
 #include "context.h"
@@ -15,7 +15,7 @@ struct Load_path_as_X{
         Thing new_one;
         new_one.LoadPicture(m_path);
         new_one.Update();
-        context::add_picture(name, new_one);
+        context::add_thing(name, new_one);
         it = name;
     }
 };

@@ -34,7 +34,9 @@ void Thing::Update(){
 }
 
 void Thing::Render(){
-    context::get_hge()->Gfx_RenderQuad(&picture);
+    if(visible){
+        context::get_hge()->Gfx_RenderQuad(&picture);
+    }
 }
 
 void Thing::Teleport(int x, int y){

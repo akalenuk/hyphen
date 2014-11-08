@@ -70,13 +70,13 @@
 1415123865 c:\users\avatar\desktop\beads-examples\game-of-15\hy_it.h
 	<string>
 
-1415118362 source:c:\users\avatar\documents\github\hyphen\game-of-15\context.cpp
+1415455941 source:c:\users\avatar\documents\github\hyphen\game-of-15\context.cpp
 	"context.h"
 	<vector>
 	<map>
 	<string>
 
-1415118346 c:\users\avatar\documents\github\hyphen\game-of-15\context.h
+1415455941 c:\users\avatar\documents\github\hyphen\game-of-15\context.h
 	"hge.h"
 	"thing.h"
 	<vector>
@@ -86,17 +86,17 @@
 1414780705 c:\users\avatar\documents\github\hyphen\hge\include\hge.h
 	<windows.h>
 
-1415301660 c:\users\avatar\documents\github\hyphen\game-of-15\thing.h
+1415456528 c:\users\avatar\documents\github\hyphen\game-of-15\thing.h
 	"hge.h"
 	<vector>
 	<map>
 	<string>
 
-1415301660 source:c:\users\avatar\documents\github\hyphen\game-of-15\thing.cpp
+1415456528 source:c:\users\avatar\documents\github\hyphen\game-of-15\thing.cpp
 	"thing.h"
 	"context.h"
 
-1415301660 source:c:\users\avatar\documents\github\hyphen\game-of-15\main.cpp
+1415456332 source:c:\users\avatar\documents\github\hyphen\game-of-15\main.cpp
 	"hge.h"
 	"hgegui.h"
 	<vector>
@@ -128,8 +128,8 @@
 	<string>
 	"hy_from.h"
 
-1415300702 c:\users\avatar\documents\github\hyphen\game-of-15\hy_from.h
-	"hy_mouse.h"
+1415455941 c:\users\avatar\documents\github\hyphen\game-of-15\hy_from.h
+	"hy_is.h"
 
 1415301659 c:\users\avatar\documents\github\hyphen\game-of-15\hy_mouse.h
 	"hy_blend.h"
@@ -142,10 +142,19 @@
 	"hy_load.h"
 	"thing.h"
 
-1415301754 c:\users\avatar\documents\github\hyphen\game-of-15\hy_load.h
-	"hy_it.h"
+1415455941 c:\users\avatar\documents\github\hyphen\game-of-15\hy_load.h
+	"hy_make.h"
 	"thing.h"
 	"context.h"
 
 1415301754 c:\users\avatar\documents\github\hyphen\game-of-15\hy_it.h
+
+1415456105 c:\users\avatar\documents\github\hyphen\game-of-15\hy_is.h
+	"hy_mouse.h"
+	"thing.h"
+	"context.h"
+
+1415456528 c:\users\avatar\documents\github\hyphen\game-of-15\hy_make.h
+	"hy_it.h"
+	"thing.h"
 

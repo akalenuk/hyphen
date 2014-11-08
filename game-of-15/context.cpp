@@ -17,7 +17,7 @@ namespace context{
         n_hge = hge;
     }
 
-    void add_picture(string name, Thing& thing){    // add error handling
+    void add_thing(string name, Thing& thing){    // add error handling
         m_name_to_thing_index[name] = m_things.size();
         m_things.push_back(thing);
     }

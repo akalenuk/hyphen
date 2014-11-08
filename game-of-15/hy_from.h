@@ -1,7 +1,7 @@
 #ifndef HY_FROM_H_INCLUDED
 #define HY_FROM_H_INCLUDED
 
-#include "hy_mouse.h"
+#include "hy_is.h"
 
 struct From_a_to_X{
     int m_a;
