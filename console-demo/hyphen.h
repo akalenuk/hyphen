@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <fstream>
 #include <stdexcept>
-#include <map>
+#include <unordered_map>
 
 #include "type_the.h"
 
@@ -173,7 +173,7 @@ namespace hyphen{
     } loaded;
 
     // memorize-"2-12-85-06"-as-"Tel"
-    std::map<std::string, the> memory;
+    std::unordered_map<std::string, the> memory;
 
     struct As {} as;
 
