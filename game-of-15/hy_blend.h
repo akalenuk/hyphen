@@ -1,7 +1,7 @@
 #ifndef HY_BLEND_H_INCLUDED
 #define HY_BLEND_H_INCLUDED
 
-#include "hy_teleport.h"
+#include "hy_slide.h"
 
 #include "thing.h"
 

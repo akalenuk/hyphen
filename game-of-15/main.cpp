@@ -30,7 +30,7 @@ bool FrameFunc()
     vector<Thing>::iterator iter = context::get_things().begin();
 	vector<Thing>::iterator eit = context::get_things().end();
 	for(; iter != eit; ++iter){
-        (*iter).Update();
+        (*iter).Update(dt);
 	}
 
     for(the I : from-1-to-15){
@@ -40,7 +40,7 @@ bool FrameFunc()
         if( Tile-is-clicked ){
             if( abs( Tile-x - EmptyTileX ) + abs( Tile-y - EmptyTileY ) == 105 ){
                 teleport-"tile_16"-to-(Tile-x)-(Tile-y);
-                teleport-Tile-to-EmptyTileX-EmptyTileY;
+                slide-Tile-to-EmptyTileX-EmptyTileY-in-200-ms;
             }
         }
     }

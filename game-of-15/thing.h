@@ -11,6 +11,12 @@ struct Thing{
 
     float real_x = 0.0f;
     float real_y = 0.0f;
+    float transition_time = 0.0f;
+    enum class TransitionType{
+        None,
+        Slide
+    } transition_type = TransitionType::None;
+    float time_left = 0.0f;
 
     int w = 0;
     int h = 0;
@@ -23,9 +29,11 @@ struct Thing{
     bool visible = true;
 
     void LoadPicture(std::string path);
-    void Update();
+    void Update(float dt);
     void Render();
     void Teleport(int x, int y);
+    void Slide(int x, int y, int ms);
+    void Fly(int x, int y, int ms);
     void Blend(int blend_mode);
 };
 

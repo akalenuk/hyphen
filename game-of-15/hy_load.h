@@ -14,7 +14,7 @@ struct Load_path_as_X{
     void operator-(string name){
         Thing new_one;
         new_one.LoadPicture(m_path);
-        new_one.Update();
+        new_one.Update(0.0f);
         context::add_thing(name, new_one);
         it = name;
     }

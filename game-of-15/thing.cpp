@@ -24,7 +24,24 @@ void Thing::LoadPicture(std::string path){
     picture.v[3].x = 0;     picture.v[3].y = h;
 }
 
-void Thing::Update(){
+void Thing::Update(float dt){
+    if(transition_type != TransitionType::None){
+        time_left -= dt*1000;
+        if(time_left <= 0.0f){
+            time_left = 0.0f;
+            transition_type = TransitionType::None;
+            real_x = static_cast<float>(to_x);
+            real_y = static_cast<float>(to_y);
+        }else{
+            float f = time_left / transition_time;
+            float t = 1.0f - f;
+            if(transition_type == TransitionType::Slide){
+                real_x = from_x + (to_x - from_x) * t;
+                real_y = from_y + (to_y - from_y) * t;
+            }
+        }
+    }
+
     int x = static_cast<int>(real_x);
     int y = static_cast<int>(real_y);
     picture.v[0].x=x;   picture.v[0].y=y;
@@ -46,7 +63,17 @@ void Thing::Teleport(int x, int y){
     from_y = y;
     to_x = x;
     to_y = y;
-    Update();
+    Update(0.0f);
+}
+
+void Thing::Slide(int x, int y, int ms){
+    from_x = static_cast<int>(real_x);
+    from_y = static_cast<int>(real_y);
+    to_x = x;
+    to_y = y;
+    transition_time = static_cast<int>(ms);
+    time_left = transition_time;
+    transition_type = TransitionType::Slide;
 }
 
 void Thing::Blend(int blend_mode){

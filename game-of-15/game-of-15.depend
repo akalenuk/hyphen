@@ -86,17 +86,17 @@
 1414780705 c:\users\avatar\documents\github\hyphen\hge\include\hge.h
 	<windows.h>
 
-1415456528 c:\users\avatar\documents\github\hyphen\game-of-15\thing.h
+1415643642 c:\users\avatar\documents\github\hyphen\game-of-15\thing.h
 	"hge.h"
 	<vector>
 	<map>
 	<string>
 
-1415456528 source:c:\users\avatar\documents\github\hyphen\game-of-15\thing.cpp
+1415643385 source:c:\users\avatar\documents\github\hyphen\game-of-15\thing.cpp
 	"thing.h"
 	"context.h"
 
-1415456332 source:c:\users\avatar\documents\github\hyphen\game-of-15\main.cpp
+1415643085 source:c:\users\avatar\documents\github\hyphen\game-of-15\main.cpp
 	"hge.h"
 	"hgegui.h"
 	<vector>
@@ -131,18 +131,18 @@
 1415455941 c:\users\avatar\documents\github\hyphen\game-of-15\hy_from.h
 	"hy_is.h"
 
-1415301659 c:\users\avatar\documents\github\hyphen\game-of-15\hy_mouse.h
-	"hy_blend.h"
+1415457425 c:\users\avatar\documents\github\hyphen\game-of-15\hy_mouse.h
+	"hy_x_y.h"
 
-1415302183 c:\users\avatar\documents\github\hyphen\game-of-15\hy_blend.h
-	"hy_teleport.h"
+1415642929 c:\users\avatar\documents\github\hyphen\game-of-15\hy_blend.h
+	"hy_slide.h"
 	"thing.h"
 
 1415301754 c:\users\avatar\documents\github\hyphen\game-of-15\hy_teleport.h
 	"hy_load.h"
 	"thing.h"
 
-1415455941 c:\users\avatar\documents\github\hyphen\game-of-15\hy_load.h
+1415642133 c:\users\avatar\documents\github\hyphen\game-of-15\hy_load.h
 	"hy_make.h"
 	"thing.h"
 	"context.h"
@@ -156,5 +156,16 @@
 
 1415456528 c:\users\avatar\documents\github\hyphen\game-of-15\hy_make.h
 	"hy_it.h"
+	"thing.h"
+
+1415457414 c:\users\avatar\documents\github\hyphen\game-of-15\hy_x_y.h
+	"hy_blend.h"
+
+1415642795 c:\users\avatar\documents\github\hyphen\game-of-15\hy_slide.h
+	"hy_fly.h"
+	"thing.h"
+
+1415642929 c:\users\avatar\documents\github\hyphen\game-of-15\hy_fly.h
+	"hy_teleport.h"
 	"thing.h"
 
