@@ -21,10 +21,8 @@ namespace hyphen{
         }
     } print;
 
-
     // the Numbers = split-"12, 34, 5, 67, 8"-with-", ";
     struct With {} with;
-
     struct a_Split_with_X{
         the m_a;
         a_Split_with_X(the a) : m_a(a) {}
@@ -66,9 +64,25 @@ namespace hyphen{
         return a_Joined_X(a);
     }
 
+    // Name-in-quotes
+    struct Quotemarks {} quotemarks;
+
+    struct string_in_X{
+        std::string m_string;
+        string_in_X(std::string s) : m_string(s) {}
+        std::string operator-(Quotemarks quotemarks){
+            return std::string("\"") + m_string + "\"";
+        }
+    };
+
+    struct X_In {} in;
+
+    string_in_X operator-(std::string s, X_In x_in) {
+        return string_in_X(s);
+    }
+
     // for(the I : from-1-to-9)
     struct To {} to;
-
     struct From_a_to_X{
         int m_a;
         From_a_to_X(int a) : m_a(a) {}
@@ -78,7 +92,6 @@ namespace hyphen{
             return i;
         }
     };
-
     struct From_a_X{
         int m_a;
         From_a_X(int a) : m_a(a) {}
@@ -86,13 +99,11 @@ namespace hyphen{
             return From_a_to_X(m_a);
         }
     };
-
     struct From_X{
         From_a_X operator-(int a){
             return From_a_X(a);
         }
     } from;
-
 
     // the FirstThree = Numbers-elements-(from-1-to-3);
     struct t_Elements_X{
@@ -106,29 +117,24 @@ namespace hyphen{
             return the(to);
         }
     };
-
     struct X_Elements{
     } elements;
-
     t_Elements_X operator-(the t, X_Elements elements){
         return t_Elements_X(t);
     }
 
     // if( size-of-FirstThree != 3 )
     struct Of {} of;
-
     struct Size_of_X{
         size_t operator-(the t){
             return t.size();
         }
     };
-
     struct Size_X {
         Size_of_X operator-(Of of){
             return Size_of_X();
         }
     } size, last;
-
 
     // save-"Hello, file!"-to-"file.txt";
     struct Save_t_to_X{
@@ -140,7 +146,6 @@ namespace hyphen{
             it = m_t;
         }
     };
-
     struct Save_t_X{
         the m_t;
         Save_t_X(the t) : m_t(t) {}
@@ -148,13 +153,11 @@ namespace hyphen{
             return Save_t_to_X(m_t);
         }
     };
-
     struct Save_X{
         Save_t_X operator-(the t){
             return Save_t_X(t);
         }
     } save;
-
 
     // the Text = loaded-from-"file.txt"
     struct Loaded_from_X{
@@ -165,7 +168,6 @@ namespace hyphen{
             return std::string(buffer.str());
         }
     };
-
     struct Loaded_X{
         Loaded_from_X operator-(From_X from){
             return Loaded_from_X();
@@ -214,20 +216,12 @@ namespace hyphen{
             return memory[key];
         }
     };
-
     struct Remembered_X{
         Remembered_as_X operator-(As as){
             return Remembered_as_X();
         }
     } remembered;
 
-    // forget-"Tel"
-    struct Forget_X{
-        void operator-(std::string key){
-            memory.erase(key);
-            it = key;
-        }
-    } forget;
 }
 
 #endif // HYPHEN_H_INCLUDED

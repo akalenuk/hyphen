@@ -6,6 +6,7 @@ int main()
 
     // basics
     the Strings = {"1", "2", "3", "4", "5", "6"};
+    print-Strings;
     for(the A : Strings){
         the B = "B = " & A;
         print-B;
@@ -24,26 +25,29 @@ int main()
 
 
     // file processing example
-    the OldErrors = loaded-from-"old_errorlist.xml";
-    the NewErrors = loaded-from-"new_errorlist.xml";
+    the IDsToCheck = {"outOfBounds", "negativeIndex", "fakeError"};
 
-    the OldErrorsList = OldErrors-split-with-"<error id=";
-    for( the ErrorEntry : OldErrorsList ){
-        the ErrorID = (ErrorEntry-split-with-" ")[1];
+    the Text = loaded-from-"errorlist_example.xml";
+
+    the Lines = Text-split-with-"<error id=";
+    the LinesWithoutXMLHeader = Lines-elements-(from-2-to-(last-of-Lines));
+    for( the Line : LinesWithoutXMLHeader ){
+        the ErrorID = (Line-split-with-" ")[1];
         memorize-ErrorID;
     }
 
-    the Report = "New error IDs are:";
-    the NewErrorList = NewErrors-split-with-"<error id=";
-    for( the ErrorEntry : NewErrorList ){
-        the ErrorID = (ErrorEntry-split-with-" ")[1];
-        if( not (remember-ErrorID) ){
-            Report = Report & "\n\t" & ErrorID;
+    the Report = "Checked error IDs:";
+    for( the ID : IDsToCheck ){
+        if( remember-(ID-in-quotemarks) ){
+            Report = Report & "\n\t" & ID & " is in error list;";
+        }else{
+            Report = Report & "\n\t" & ID & " is not.";
         }
     }
 
-    save-Report-to-"novel_errors.txt";
+    save-Report-to-"checked_errors.txt";
     print-it;
+
 
     return 0;
 }

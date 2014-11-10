@@ -1,0 +1,4 @@
+Checked error IDs:
+	outOfBounds is in error list;
+	negativeIndex is in error list;
+	fakeError is not.
