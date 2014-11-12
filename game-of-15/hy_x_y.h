@@ -7,9 +7,8 @@ struct X_x{} x;
 int operator-(string name, X_x x_x){
     return static_cast<int>(context::get_thing(name).real_x);
 }
-
 struct X_y{} y;
-int operator-(string name, X_y x_x){
+int operator-(string name, X_y x_y){
     return static_cast<int>(context::get_thing(name).real_y);
 }
 

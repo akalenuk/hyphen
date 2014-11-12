@@ -39,12 +39,10 @@ bool FrameFunc()
     //
     for(the I : from-1-to-15){
         the Tile = "tile_" & I;
-        the EmptyTileX = "tile_16"-x;
-        the EmptyTileY = "tile_16"-y;
         if( Tile-is-clicked ){
-            if( abs( Tile-x - EmptyTileX ) + abs( Tile-y - EmptyTileY ) == 105 ){
-                teleport-"tile_16"-to-(Tile-x)-(Tile-y);
-                slide-Tile-to-EmptyTileX-EmptyTileY-in-200-ms;
+            if( abs((Tile-x) - ("tile_16"-x)) + abs((Tile-y) - ("tile_16"-y)) == 105 ){
+                slide-Tile-on-"tile_16"-in-200-ms;
+                teleport-"tile_16"-on-Tile;
             }
         }
     }
@@ -102,11 +100,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         //
         for(the I : from-1-to-4){
             for(the J : from-1-to-4){
-                the K = I * 4 + J - 4;
+                the TileNumber = I * 4 + J - 4;
                 the X = 85 + J * 105;
                 the Y = I * 105 - 15;
-                if( K < 16){
-                    load-("stuff/tile_" & K & ".png")-as-("tile_" & K);
+                if( TileNumber <= 15 ){
+                    load-("stuff/tile_" & TileNumber & ".png")-as-("tile_" & TileNumber);
                     blend-it-glassy;
                 }else{
                     make-"tile_16";

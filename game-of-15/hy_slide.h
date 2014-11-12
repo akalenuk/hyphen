@@ -49,6 +49,15 @@ struct Slide_name_to_x_X{
     }
 };
 
+struct Slide_name_on_X{
+    string m_name;
+    Slide_name_on_X(string name) : m_name{name} { }
+    Slide_name_to_x_y_X operator-(string to_name){
+        Thing& thing = context::get_thing(to_name);
+        return Slide_name_to_x_y_X(m_name, thing.real_x, thing.real_y);
+    }
+};
+
 struct Slide_name_to_X{
     string m_name;
     Slide_name_to_X(string name) : m_name{name} { }
@@ -62,6 +71,9 @@ struct Slide_name_X{
     Slide_name_X(string name) : m_name{name} {}
     Slide_name_to_X operator-(To to){
         return Slide_name_to_X(m_name);
+    }
+    Slide_name_on_X operator-(On on){
+        return Slide_name_on_X(m_name);
     }
 };
 

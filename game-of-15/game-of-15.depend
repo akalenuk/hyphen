@@ -92,11 +92,11 @@
 	<map>
 	<string>
 
-1415643385 source:c:\users\avatar\documents\github\hyphen\game-of-15\thing.cpp
+1415643630 source:c:\users\avatar\documents\github\hyphen\game-of-15\thing.cpp
 	"thing.h"
 	"context.h"
 
-1415643085 source:c:\users\avatar\documents\github\hyphen\game-of-15\main.cpp
+1415818754 source:c:\users\avatar\documents\github\hyphen\game-of-15\main.cpp
 	"hge.h"
 	"hgegui.h"
 	<vector>
@@ -138,7 +138,7 @@
 	"hy_slide.h"
 	"thing.h"
 
-1415301754 c:\users\avatar\documents\github\hyphen\game-of-15\hy_teleport.h
+1415818480 c:\users\avatar\documents\github\hyphen\game-of-15\hy_teleport.h
 	"hy_load.h"
 	"thing.h"
 
@@ -158,11 +158,11 @@
 	"hy_it.h"
 	"thing.h"
 
-1415457414 c:\users\avatar\documents\github\hyphen\game-of-15\hy_x_y.h
+1415818913 c:\users\avatar\documents\github\hyphen\game-of-15\hy_x_y.h
 	"hy_blend.h"
 
-1415642795 c:\users\avatar\documents\github\hyphen\game-of-15\hy_slide.h
-	"hy_fly.h"
+1415818480 c:\users\avatar\documents\github\hyphen\game-of-15\hy_slide.h
+	"hy_teleport.h"
 	"thing.h"
 
 1415642929 c:\users\avatar\documents\github\hyphen\game-of-15\hy_fly.h

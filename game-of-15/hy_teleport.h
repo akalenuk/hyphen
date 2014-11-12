@@ -7,6 +7,7 @@
 #include "thing.h"
 
 struct To{} to;
+struct On {} on;
 
 struct Teleport_name_to_x_X{
     string m_name;
@@ -26,11 +27,24 @@ struct Teleport_name_to_X{
     }
 };
 
+struct Teleport_name_on_X{
+    string m_name;
+    Teleport_name_on_X(string name) : m_name{name} { }
+    void operator-(string to_name){
+        Thing& thing = context::get_thing(to_name);
+        context::get_thing(m_name).Teleport(thing.real_x, thing.real_y);
+        it = m_name;
+    }
+};
+
 struct Teleport_name_X{
     string m_name;
     Teleport_name_X(string name) : m_name{name} {}
     Teleport_name_to_X operator-(To to){
         return Teleport_name_to_X(m_name);
+    }
+    Teleport_name_on_X operator-(On on){
+        return Teleport_name_on_X(m_name);
     }
 };
 
