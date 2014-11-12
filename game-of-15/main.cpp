@@ -96,7 +96,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 
         //
-        // here's the whole code for the game initializing
+        // here's the whole code for the game initialization
         //
         for(the I : from-1-to-4){
             for(the J : from-1-to-4){
