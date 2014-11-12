@@ -73,4 +73,7 @@ Hyphen-constructs are very malleable in this regard. There are some limitations 
 
 Nevertheless, I see a huge potential in this technique. Having nice mini-language code in the same environment as the general purpose language with all its libraries is indeed exciting. You can debug and profile it with the same set of tools, and you also can grow this mini-language the way you grow any other code. You don't need to adopt any scripting language or adapt any parser-generator, just add one hyphen-construct at the time. It's natural way to grow a language.
 
-I've prepared two little demos for it. One is in `console-demo` folder, and another in the `game-of-15`. `game-of-15` also uses HGE. Take a look at them, they are small enough to read in one piece.
+I've prepared two little demos for it. One is in `console-demo` folder, and another in the `game-of-15`. `game-of-15` also uses HGE. Take a look at hyphen-code pieces in them:
+- https://github.com/akalenuk/hyphen/blob/master/game-of-15/main.cpp#L38
+- https://github.com/akalenuk/hyphen/blob/master/game-of-15/main.cpp#L99
+- https://github.com/akalenuk/hyphen/blob/master/console-demo/main.cpp
