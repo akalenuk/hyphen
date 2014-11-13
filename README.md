@@ -31,9 +31,9 @@ It's rather plain to see what is it for. It reads some list of errors in XML for
 
 And yet it is plain C++.
 
-C++11 to be exact. But it doesn't have to be exactly C++, all you need to get your hyphen-notation constructs implemented in a language of your choice is to overload operator `-` for a bunch of trivial types. Of course operator overloding means you have to be able to make your own types as well. So potentially C#, Python, PHP and even Fortran or Ada can adopt hyphen-notation with little effort.
+C++11 to be exact. But it doesn't have to be exactly C++, all you need to get your hyphen-notation constructs implemented in a language of your choice is to overload operator `-` for a bunch of trivial types. Of course operator overloading means you have to be able to make your own types as well. So potentially C#, Python, PHP and even Fortran or Ada can adopt hyphen-notation with little effort.
 
-Let's see how it is done. Consider this exaple: `Line-split-by-" "`. It takes a text string and makes an array of words out of, so "Hello, world!" becomes {"Hello,", "world!"}. Now look:
+Let's see how it is done. Consider this example: `Line-split-by-" "`. It takes a text string and makes an array of words out of, so "Hello, world!" becomes {"Hello,", "world!"}. Now look:
 
     struct With {} with;
     
@@ -65,7 +65,7 @@ Structure `a_Split_with_X` is a container for actual code. It has constructor wh
 
 Structure `a_Split_X` also has a constructor to recieve "Hello, world!" string, but when object of type `a_Split_X` is called with minus `with`, remember we declared it just then, it returns a freshly instanced object of type `a_Split_with_X` with "Hello, world!" passed to it via constructor.
 
-Structure `X_Split` is empty, but it has an external operator of type `the`. Nevermind the type, this `the` is just a variant that accepts arrays, it's not that importrant right now. What is importrant, there is an object of type `X_Split` namely `split`. Being called with operator `-` on the left, it recieves the argument and returns an instance of `a_Split_X` with it.
+Structure `X_Split` is empty, but it has an external operator of type `the`. Nevermind the type, this `the` is just a variant that accepts arrays, it's not that important right now. What is important, there is an object of type `X_Split` namely `split`. Being called with operator `-` on the left, it receives the argument and returns an instance of `a_Split_X` with it.
 
 You can see, these are kind of chained. But actually the topology of these instantiations doesn't have to be that simple. You can build a hyphen-construct that can accept 'with' or 'without' for a_Split_X and that would be a tree with two possible code chunks called at the end. Or instead of 'with' you can accept another string, concatenate it to `m_a` and instance yet another `a_Split_X`. That would be a cycle; you can make theoretically endless hyphen-constructs with these.
 
