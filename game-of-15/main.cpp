@@ -37,16 +37,16 @@ bool FrameFunc()
     //
     // here's the whole code for the game logic
     //
-    for(the I : from-1-to-15){
+    for(the I : from-1-to-15)
+    {
         the Tile = "tile_" & I;
-        if( Tile-is-clicked ){
-            if( abs((Tile-x) - ("tile_16"-x)) + abs((Tile-y) - ("tile_16"-y)) == 105 ){
-                slide-Tile-on-"tile_16"-in-200-ms;
+        if( Tile-is-clicked )
+            if( abs((Tile-x) - ("tile_16"-x)) + abs((Tile-y) - ("tile_16"-y)) == 105 )
+                slide-Tile-on-"tile_16"-in-200-ms,
                 teleport-"tile_16"-on-Tile;
-            }
-        }
     }
     teleport-"cursor"-to-(mouse-x)-(mouse-y);
+
 
 
 
@@ -98,20 +98,19 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         //
         // here's the whole code for the game initialization
         //
-        for(the I : from-1-to-4){
-            for(the J : from-1-to-4){
+        for(the I : from-1-to-4)
+            for(the J : from-1-to-4)
+            {
                 the TileNumber = I * 4 + J - 4;
                 the X = 85 + J * 105;
                 the Y = I * 105 - 15;
-                if( TileNumber <= 15 ){
-                    load-("stuff/tile_" & TileNumber & ".png")-as-("tile_" & TileNumber);
+                if( TileNumber <= 15 )
+                    load-("stuff/tile_" & TileNumber & ".png")-as-("tile_" & TileNumber),
                     blend-it-glassy;
-                }else{
+                else
                     make-"tile_16";
-                }
                 teleport-it-to-X-Y;
             }
-        }
         load-"stuff/cursor.png"-as-"cursor";
 
 
